@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/Valida_envia.js"></script>
+    <title>Formulario</title>
+</head>
+<body>
+    <form id="fvalida" action="recibe.php" method="POST">
+        Nombre: <input type="text" name="nombre" id="nombre"><br/>
+        Apellido:<input type="text" name="apellido" id="apellido"><br/>
+        Correo: <input type="text" name="email"><br/>
+        Contraseña: <input type="password" name="pass"><br/>
+        Sexo: <input type="radio" name="sexo" value="M"> Masculino
+        <input type="radio" name="sexo" value="F">Femenino <br/>
+        <input type="submit" value="Enviar" onclick="valida_envia()">
+    </form>
+</body>
+</html>
