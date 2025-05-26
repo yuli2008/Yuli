@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+    crossorigin="anonymous"> 
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cssPro/styleP.css">
+    <title>Document</title>
+    <style>
+      .carousel-container {
+    max-width: 20%; /* Ajusta el ancho total del carrusel */
+    margin: 0 auto; /* Centra el carrusel */
+}
+
+.carousel-item img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo del carrusel */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Corta la imagen para ajustarse mejor al contenedor */
+}
+/* Fondo general naranja */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ff4500; /* Color naranja fuerte */
+}
+
+/* Sección del menú */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap; /* Permite que las tarjetas bajen en pantallas pequeñas */
+}
+/*h2*/
+.titulo-menu {
+    font-family: 'Impact';
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+    }
+    .titulo-menu::after {
+  content: '';
+  width: 115px;
+  height: 4px;
+  background-color:#ffc1d4;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* Tarjetas individuales */
+.menu-card {
+    background: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+/* Imágenes de cada producto */
+.menu-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Títulos de cada comida */
+.menu-card h2 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #b11f1f;
+}
+
+/* Descripción debajo del título */
+.menu-card p {
+    font-size: 14px;
+    color: #333;
+}
+/* Precio en un círculo blanco */
+.price {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color:#b11f1f;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* ----------------- RESPONSIVO ----------------- */
+
+/* Ajustes para pantallas pequeñas como celulares */
+@media (max-width: 700px) {
+    .menu {
+        flex-direction: column; /* Cambia de fila a columna */
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .menu-card {
+        width: 80%; /* Las tarjetas ocupan más ancho */
+        margin-bottom: 20px;
+    }
+}
+
+/*
+Este bloque @media detecta cuando la pantalla mide menos de 700px
+y cambia el diseño de las tarjetas de horizontal a vertical, 
+para que se vean apiladas una abajo de otra en celulares y tablets.
+*/
+    </style>
+</head>
+<body>
+    <table class="header-imgPro" align="center" border="0">
+        <tr>
+            <th class="left-h" scope="col"><img src="imgPro/Scissors.png" alt=""/></th>
+            <th class="right-h" scope="col"><img src="imgPro/CoolText2.png" alt=""></th>
+        </tr>
+    </table>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #a95278;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Inicio.html">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="QuinesSomos.html">¿Quienes somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""></a>
+              </li>
+              
+              <li class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle" href="servicios.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Servicios
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li ><a class="dropdown-item" href="Manicura.html">Manicura</a></li>
+                  <li><a class="dropdown-item" href="tratamientos.html">Tratamientos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="Tintes.html">Tintes</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Ubicacion.html">Ubicación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Reservaciones.html">Reservaciónes</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <article>
+        <br>
+        <h2 class="titulo-menu">Tratamientos</h2>
+    <section class="menu">
+    <div class="menu-card">
+        <img src="imgPro/keratina.png">
+        <h2>Keratina </h2>
+        <p>
+          Ayuda a hidratar el cabello y a mantener su vitalidad, dándole fuerza y brillo. </p>
+        <div class="price">$200</div>
+    </div>
+  
+    <div class="menu-card">
+        <img src="imgPro/nano.png">
+        <h2>Nanoplastia</h2>
+        <p> Es un tratamiento de alisado es utiliza nanotecnología para reestructurar, hidratar y alisar el cabello de forma natural y duradera, con resultados que pueden durar hasta 6 meses. </p>
+        <div class="price">$830</div>
+    </div>
+  
+    <div class="menu-card">
+        <img src="imgPro/botox.png">
+        <h2>Botox</h2>
+        <p> Repara las puntas florecidas y las hebras quebradizas, al mismo tiempo que mejora el encrespamiento pero manteniendo el volumen del pelo. </p>
+        <div class="price">$600</div>
+    </div>
+    <div class="menu-card">
+      <img src="imgPro/colageno.png">
+      <h2>Colageno</h2>
+      <p> Es una proteína que aporta fuerza, elasticidad, brillo y suavidad al cabello. También ayuda a prevenir la caída del cabello y a que nazca pelo nuevo y sano. 
+      </p>
+      <div class="price">$500</div>
+  </div>
+    </section>
+      </article>
+
+      <!-- <article>
+        <section>
+          <div id="tab">
+            <div class="table-container">
+              <table>
+                  <tr>
+                      <th>Tratamiento</th>
+                      <th>Descripción</th>
+                      <th>$Precio</th>
+                  </tr>
+                  <tr> 
+                      <td><b>Keratina:</b> <img src="imgPro/keratina.png" alt="Imagen 1"></td>
+                      <td>
+                        Ayuda a hidratar el cabello y a mantener su vitalidad, dándole fuerza y brillo.</td>
+                        <td>$200</td>
+                  </tr>
+                  <tr>
+                      <td><b>Nanoplastia:</b><img src="imgPro/nano.png" alt="Imagen 2"></td>
+                      <td><br>
+                        Es un tratamiento de alisado es utiliza nanotecnología para reestructurar, hidratar y alisar el cabello de forma natural y duradera, con resultados que pueden durar hasta 6 meses. </td>
+                        <td>$830</td>
+                  </tr>
+                  <tr>
+                      <td><b>Botox capilar:</b><img src="imgPro/botox.png" alt="Imagen 3"> </td>
+                      <td>
+                        Repara las puntas florecidas y las hebras quebradizas, al mismo tiempo que mejora el encrespamiento pero manteniendo el volumen del pelo.
+                        <br>
+                      </td>
+                      <td>$600</td>
+                  </tr>
+                  <tr>
+                    <td><b>Colageno:</b><img src="imgPro/colageno.png" alt="Imagen 3"> </td>
+                    <td> <br>
+                      Es una proteína que aporta fuerza, elasticidad, brillo y suavidad al cabello. También ayuda a prevenir la caída del cabello y a que nazca pelo nuevo y sano. 
+                    </td>
+                    <td>$500</td>
+                </tr>
+                
+             
+              </table>
+          </div>
+          </div>
+          
+        </section>
+      </article> -->
+      <footer>
+        <p> 
+            <font size="5" face="arial" aling="center">
+               Siguenos en nuestras redes sociales  &nbsp; &nbsp; &nbsp;
+            </font> <br>
+        
+         <a href="https://www.facebook.com/profile.php?id=100075904404210"> &nbsp;
+            <img src="imgPro/facebook.png" width="35px" height="35px" title="Facebook">
+         </a> 
+         <a href="https://www.instagram.com/elrincondelarte_estilismo/"> &nbsp;
+            <img src="imgPro/instagram.png" width="35px" height="35px" title="Instagram">
+         </a>
+         <a href="https://api.whatsapp.com/send?phone=5219511601510&text=%C2%A1Hola!">
+            <img src="imgPro/whatsapp.png" width="35px" height="35px" title="Whatssap">
+         </a>
+    
+        </p>
+    </footer>    
+        
+</body>
+</html>

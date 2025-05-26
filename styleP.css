@@ -1,0 +1,184 @@
+/*DISEÑO RESPONSIVO*/
+.header-imgPro{
+    width: 100%; /*ancho*/
+    background-color: #d2809b;/*color del fondo de la pagina*/
+}
+tr,tbody{
+width: 100%;/*tamaño del ancho del borde de la tabla*/
+}
+.left-h {
+    width: 15%;/*ancho*/
+}
+.left-h img{
+    width: 50%;/*ancho*/
+    height: auto;/*largo*/
+    text-align: right;
+    object-fit: cover;
+}
+.right-h{
+    width: 75%;
+}
+.right-h img{
+    width: 75%;
+    height: auto;
+    object-fit: cover;
+}
+article{
+    float: right; /*alinea a la izquierda*/
+    padding: 15px; 
+    width: 100%;
+    background-color: #bb6c87;/*da color de la caja */
+    /* height: 0px;alarga */
+	align-items: center;
+    font-family: 'Arial';
+    font-size: 2.5rem;
+
+h2{
+    text-align: center;
+    font-size: 100%;
+    align-items: center;
+}
+#tab{
+	.table-container{
+		overflow-x: auto;/*se utiliza para definir que hacer con el contenido 
+		que se desborda en los bordes izquierdo y derecho de un elemento*/
+	}
+	table{
+		width: 100%;
+		max-width: 650px; /*establecce que el ancho de un elemneto*/
+		border-collapse: collapse;/*la propiedad border-collapse permite elegir el modo de 
+		presentacion de los bordes de las celdas y de la tabla*/
+		margin: auto;
+	}
+	th,td{
+		border: 1px solid #000000;
+		padding: 10px;
+		text-align:center;
+		width: 100;
+		justify-content:center;
+	}
+	th{
+		background-color: #b866ee;
+		color: rgb(219, 199, 238);
+	}
+	td img{
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		border-radius: 8px;
+	}
+	@media screen and (max-width: 500px){
+		/*es una regla de media query que permite aplicar estilos CSS a dispositivos con 
+		un ancho de pantalla de 600px o menos*/
+		table{
+			width: 100%;
+		}
+		td,th{
+			padding: 8px;
+		}
+	}	
+}	
+section{
+    border-radius: 8px;
+}
+
+}
+footer{
+    background-color: #d2809b;
+    padding: 10px;/*estira*/
+    text-align: center;/*centra el texto*/
+    color: rgb(27, 10, 4);/*da color al texto*/
+}
+*{box-sizing:border-box;}
+
+form {
+	width: 360px;          /* más estrecho */
+	padding: 20px 25px;    /* mucho menos espacio interno */
+	border-radius: 20px;
+	margin: auto;
+	background-color: #ffc1d4;
+}
+form label {
+	display: block;        /* que ocupe su propia línea */
+     margin-bottom: 4px; /* Espacio pequeño entre label e input */
+	font-size: 16px;
+}
+form input[type="text"],
+form input[type="tel"],
+form input[type="date"],
+form input[type="time"] {
+    margin-bottom: 2px; /* controla el espacio vertical */
+	width: 100%;
+	padding: 8px 10px;
+	font-size: 15px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	background-color: #fff;
+	box-sizing: border-box;
+} 
+form input[type="submit"] {
+	width: 100%;
+	padding: 15px;
+	font-size: 15px;
+	border: none;
+	border-radius: 5px;
+	background-color: #000;
+	color: #fff;
+	transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+	background-color: #292828;
+	cursor: pointer;
+}
+.formulario input,
+.contacto select {
+    margin: 10px ;
+    padding: 10px;
+    border: 1px solido #ccc;
+	border-radius: 10px;
+}
+/* .formulario select {
+      width: 90%;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      margin-bottom: 10px;
+      font-size: 5px;
+    } */
+
+
+p{
+	text-align: center;
+}
+.image-fondo {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+}
+
+
+.image-fondo {
+    background-image: url("https://i0.wp.com/rayosenelcabello.com/wp-content/uploads/2018/12/Te%C3%B1ir-Despues-Tratamiento-Keratina.png?resize=493%2C208");
+}
+.cabecera{
+  color: #fff;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  vertical-align: middle;
+  text-shadow: #111 0px 0px 10px;
+}
+.map-responsive {
+    overflow:hidden;
+    padding-bottom:400px; /*Reduce este valor si el mapa fuera muy alto, por ejemplo 250px, puedes usar porcentajes, 50%*/
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}

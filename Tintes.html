@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+    crossorigin="anonymous"> 
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cssPro/styleP.css">
+    <title>Document</title>
+    <style>
+      .carousel-container {
+    max-width: 20%; /* Ajusta el ancho total del carrusel */
+    margin: 0 auto; /* Centra el carrusel */
+}
+
+.carousel-item img {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo del carrusel */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Corta la imagen para ajustarse mejor al contenedor */
+}
+/* Fondo general naranja */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ff4500; /* Color naranja fuerte */
+}
+
+/* Sección del menú */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap; /* Permite que las tarjetas bajen en pantallas pequeñas */
+}
+/*h2*/
+.titulo-menu {
+    font-family: 'Impact';
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+    }
+    .titulo-menu::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color:#ffc1d4;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* Tarjetas individuales */
+.menu-card {
+    background: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+/* Imágenes de cada producto */
+.menu-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Títulos de cada comida */
+.menu-card h2 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #b11f1f;
+}
+
+/* Descripción debajo del título */
+.menu-card p {
+    font-size: 14px;
+    color: #333;
+}
+/* Precio en un círculo blanco */
+.price {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color:#b11f1f;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* ----------------- RESPONSIVO ----------------- */
+
+/* Ajustes para pantallas pequeñas como celulares */
+@media (max-width: 700px) {
+    .menu {
+        flex-direction: column; /* Cambia de fila a columna */
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .menu-card {
+        width: 80%; /* Las tarjetas ocupan más ancho */
+        margin-bottom: 20px;
+    }
+}
+
+/*
+Este bloque @media detecta cuando la pantalla mide menos de 700px
+y cambia el diseño de las tarjetas de horizontal a vertical, 
+para que se vean apiladas una abajo de otra en celulares y tablets.
+*/
+
+
+    </style>
+</head>
+<body>
+    <table class="header-imgPro" align="center" border="0">
+        <tr>
+            <th class="left-h" scope="col"><img src="imgPro/Scissors.png" alt=""/></th>
+            <th class="right-h" scope="col"><img src="imgPro/CoolText2.png" alt=""></th>
+        </tr>
+    </table>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #a95278;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Inicio.html">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="QuinesSomos.html">¿Quienes somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""></a>
+              </li>
+              
+              <li class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle" href="servicios.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Servicios
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li ><a class="dropdown-item" href="Manicura.html">Manicura</a></li>
+                  <li><a class="dropdown-item" href="tratamientos.html">Tratamientos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="Tintes.html">Tintes</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Ubicacion.html">Ubicación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Reservaciones.html">Reservaciónes</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <article>
+        <br>
+        <h2 class="titulo-menu">Tintes</h2>
+    <section class="menu">
+    <div class="menu-card">
+        <img src="imgPro/ton1.png">
+        <h2>Tono 1 </h2>
+        <p>El color más oscuro, casi sin reflejos. </p>
+        <div class="price">$750</div>
+    </div>
+  
+    <div class="menu-card">
+        <img src="imgPro/ton2.png">
+        <h2>Tono 2</h2>
+        <p>Un castaño oscuro con reflejos ligeramente más claros que el negro. </p>
+        <div class="price">$800</div>
+    </div>
+  
+    <div class="menu-card">
+        <img src="imgPro/ton3.png">
+        <h2>Tono 3</h2>
+        <p>Un color castaño con un tono oscuro, a menudo con matices marrones. </p>
+        <div class="price">$850</div>
+    </div>
+    <div class="menu-card">
+      <img src="imgPro/ton4.png">
+      <h2>Tono 4</h2>
+      <p>Un tono castaño medio, el color más común en muchas personas. 
+      </p>
+      <div class="price">$700</div>
+  </div>
+  <div class="menu-card">
+    <img src="imgPro/ton5.png">
+    <h2>Tono 5</h2>
+    <p>Un tono más claro que el castaño, con reflejos amarillentos o rojizos. </p>
+    <div class="price">$900</div>
+  </div>
+  <div class="menu-card">
+    <img src="imgPro/ton6.png">
+    <h2>Tono 6</h2>
+    <p>Un rubio con un tono más oscuro, a menudo con matices dorados o castaños. </p>
+    <div class="price">$950</div>
+  </div>
+  <div class="menu-card">
+    <img src="imgPro/ton7.png">
+    <h2>Tono 7</h2>
+    <p>Un rubio medio, a menudo con reflejos dorados o miel. </p>
+    <div class="price">$940</div>
+  </div>
+  <div class="menu-card">
+    <img src="imgPro/ton8.png">
+    <h2>Tono 8</h2>
+    <p>Un rubio más claro que el rubio, a menudo con reflejos más pálidos o cenicientos. </p>
+    <div class="price">$900</div>
+  </div>
+  <div class="menu-card">
+    <img src="imgPro/ton9.png">
+    <h2>Tono 9</h2>
+    <p>Un rubio muy claro, casi blanco, a menudo con reflejos perlados o nacarados. </p>
+    <div class="price">$1000</div>
+  </div>
+  <div class="menu-card">
+    <img src="imgPro/ton10.png">
+    <h2>Tono 10</h2>
+    <p>El rubio más claro, casi blanco con un tono frío, a menudo con reflejos plateados o perlados. </p>
+    <div class="price">$1200</div>
+  </div>
+    </section>
+      </article>
+    
+      <!-- <article>
+        <section>
+          <div id="tab">
+            <div class="table-container">
+              <table>
+                  <tr>
+                      <th>Tonos</th>
+                      <th>Descripción</th>
+                      <th>$Precio</th>
+                  </tr>
+                  <tr> 
+                      <td><b>Tono 1: </b>Negro.<img src="imgPro/ton1.png" alt="Imagen 1"></td>
+                      <td>
+                        El tono 1 de cabello es negro profundo, el más oscuro de la escala de tonos de cabello.                        
+                        <td>$950</td>
+                  </tr>
+                  <tr>
+                      <td><b>Tono 2:</b> Moreno.<img src="imgPro/ton2.png" alt="Imagen 2"></td>
+                      <td><br>
+                        El tono 2 de cabello es un negro profundo o castaño oscuro, un tono "casi negro" que aún muestra matices de color.             
+                        <td>$1,000</td>
+                  </tr>
+                  <tr>
+                      <td><b>Tono 3: </b>Castaño oscuro.<img src="imgPro/ton3.png" alt="Imagen 3"> </td>
+                      <td>
+                        El tono 3 de cabello es un castaño oscuro, un poco más claro que el nivel 2.                         <br>
+                      </td>
+                      <td>$500</td>
+                  </tr>
+                  <tr>
+                    <td><b>Tono 4:</b>Castaño.<img src="imgPro/ton4.png" alt="Imagen 3"> </td>
+                    <td> <br>
+                      El tono 4 de cabello es castaño oscuro. Es uno de los niveles que se usan para describir el tono del cabello, junto con otros como el 1 (negro), 2, 3, 5, 6, 7, 8, 9 y 10 (rubio platino). 
+                    </td>
+                    <td>$800</td>
+                </tr>
+                <tr>
+                  <td><b>Tono 5:</b>Castaño claro.<img src="imgPro/ton5.png" alt="Imagen 3"> </td>
+                  <td> <br>
+                    El tono 5 de cabello es castaño claro, y puede tener reflejos caobas con un tono rojizo.                   </td>
+                  <td>$1,200</td>
+              </tr>
+                <tr> 
+                  <td><b>Tono 6: </b>Rubio ocuro.<img src="imgPro/ton6.png" alt="Imagen 1"></td>
+                  <td>
+                    El tono 6 de cabello es un rubio oscuro. Es un color que se adapta a la mayoría de las personas y que les da un aspecto natural.                     <td>$1,000</td>
+              </tr>
+              <tr>
+                  <td><b>Tono 7:</b> Rubio.<img src="imgPro/ton7.png" alt="Imagen 2"></td>
+                  <td><br>
+                    El tono 7 de cabello es un rubio medio. Es uno de los niveles de coloración del cabello, que van del 1 al 10, donde 1 es negro y 10 es rubio más claro. 
+                    <td>$1,000</td>
+              </tr>
+              <tr>
+                  <td><b>Tono 8: </b> Rubio claro.<img src="imgPro/ton8.png" alt="Imagen 3"> </td>
+                  <td>
+                    El tono 8 de cabello es un rubio medio o claro.                    <br>
+                  </td>
+                  <td>$900</td>
+              </tr>
+              <tr>
+                <td><b>Tono 9:</b> Rubio muy claro.<img src="imgPro/ton9.png" alt="Imagen 3"> </td>
+                <td> <br>
+                  El tono 9 de cabello es rubio extra claro. Es un color de nivel 9 en la escala de coloración, donde el 10 es blanco/platino.                 </td>
+                <td>$1,300</td>
+            </tr>
+            <tr>
+              <td><b>Tono 10:</b> Rubio platinado.<img src="imgPro/ton10.png" alt="Imagen 3"> </td>
+              <td> <br>
+                El tono 10 de cabello es rubio extraclaro, es decir, el color más claro en la escala internacional de tintes.               </td>
+              <td>$1,500</td>
+          </tr>
+             
+              </table>
+          </div>
+          </div>
+          
+        </section>
+      </article> -->
+      <footer>
+        <p> 
+            <font size="5" face="arial" aling="center">
+               Siguenos en nuestras redes sociales  &nbsp; &nbsp; &nbsp;
+            </font> <br>
+        
+         <a href="https://www.facebook.com/profile.php?id=100075904404210"> &nbsp;
+            <img src="imgPro/facebook.png" width="35px" height="35px" title="Facebook">
+         </a> 
+         <a href="https://www.instagram.com/elrincondelarte_estilismo/"> &nbsp;
+            <img src="imgPro/instagram.png" width="35px" height="35px" title="Instagram">
+         </a>
+         <a href="https://api.whatsapp.com/send?phone=5219511601510&text=%C2%A1Hola!">
+            <img src="imgPro/whatsapp.png" width="35px" height="35px" title="Whatssap">
+         </a>
+    
+        </p>
+    </footer>
+
+    
+        
+</body>
+</html>

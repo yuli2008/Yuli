@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+    crossorigin="anonymous"> 
+    
+    <script src="js/validaform.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cssPro/styleP.css">
+    <title>Document</title>
+    <style>
+      .titulo-menu {
+    font-family: 'Impact';
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+    }
+       .titulo-menu::after {
+  content: '';
+  width: 150px;
+  height: 4px;
+  background-color:#ffc1d4;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+.contacto select {
+    margin: 10px ;
+    padding: 10px;
+    border: 1px solido #ccc;
+	border-radius: 10px;
+  font-size: 20px;
+}
+
+
+    </style>
+    
+</head>
+<body>
+    <table class="header-imgPro" align="center" border="0">
+        <tr>
+            <th class="left-h" scope="col"><img src="imgPro/Scissors.png" alt=""/></th>
+            <th class="right-h" scope="col"><img src="imgPro/CoolText2.png" alt=""></th>
+        </tr>
+    </table>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #a95278;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Inicio.html">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="QuinesSomos.html">¿Quienes somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href=""></a>
+              </li>
+              
+              <li class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle" href="servicios.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Servicios
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li ><a class="dropdown-item" href="Manicura.html">Manicura</a></li>
+                  <li><a class="dropdown-item" href="tratamientos.html">Tratamientos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="Tintes.html">Tintes</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Ubicacion.html">Ubicación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Reservaciones.html">Reservaciónes</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+     <article class="contacto"><br>
+      <h2 class="titulo-menu">Reservaciones</h2>
+        <p style="align-content: center;">
+
+      <form method="post" action="datos.php" class="contacto" name="fvalida" >
+
+<label for="name">Nombre completo:</label>
+<input type="text" name="nombre" placeholder="Nombre" required>
+
+<label for="numero">Número telefónico:</label>
+<input type="tel" name="telefono" placeholder="Teléfono" required>
+
+
+   <label for="servicio">Tipo de servicio</label>
+    <select id="servicio_deseado" name="servicio_deseado" required>
+      <option value="">-Selecciona-</option>
+      <option value="corte">Corte de cabello</option>
+      <option value="tinte">Tinte</option>
+      <option value="manicura">Manicura</option>
+      <option value="depilacion">Depilación</option>
+      <option value="facial">Limpieza facial</option>
+    </select>
+
+<label for="fecha">Fecha:</label>
+<input type="date" id="fecha" name="fecha" required>
+
+<label for="hora">Hora:</label>
+<input type="time" id="hora" name="hora" required>
+
+<input class="button" type="submit" value="enviar" onclick="valida_envia()">
+
+</form>
+<br>
+      <!-- <form action="#" target="" method="get" name="formDatosPersonales">
+
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+    
+      <label for="apellidos">Apellidos</label>
+      <input type="text" name="apellidos" id="apellidos" placeholder="1r Apellido"/>
+    
+      <label for="numero telefonico" />Teléfono</label>
+      <input type="email" name="email" id="email" placeholder="Número" required />
+    
+      <label for="asunto">Asunto</label>
+      <input type ="text" name="asunto" id="asunto" placeholder="Titular de la consulta"/>
+    
+      <label for="mensaje">Mensaje</label>
+      <textarea name="mensaje" for="mensaje" placeholder="Describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+      
+      <input type="submit" name="enviar" value="Enviar datos"/>
+    </form> -->
+     </article>
+      
+     <footer>
+      <p> 
+          <font size="5" face="arial" aling="center">
+             Siguenos en nuestras redes sociales  &nbsp; &nbsp; &nbsp;
+          </font> <br>
+      
+       <a href="https://www.facebook.com/profile.php?id=100075904404210"> &nbsp;
+          <img src="imgPro/facebook.png" width="35px" height="35px" title="Facebook">
+       </a> 
+       <a href="https://www.instagram.com/elrincondelarte_estilismo/"> &nbsp;
+          <img src="imgPro/instagram.png" width="35px" height="35px" title="Instagram">
+       </a>
+       <a href="https://api.whatsapp.com/send?phone=5219511601510&text=%C2%A1Hola!">
+          <img src="imgPro/whatsapp.png" width="35px" height="35px" title="Whatssap">
+       </a>
+  
+      </p>
+  </footer>
+
+    
+        
+</body>
+</html>
